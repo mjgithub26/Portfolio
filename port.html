@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="styles.css" rel="stylesheet" >
+    <script src="https://kit.fontawesome.com/cbe272a4bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">My Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="detail">
+            <h1>I'm Mohamed <span>Jamal</span></h1>
+            <p><span>W</span>eb <span>D</span>eveloper</p>
+        <a href="#">DOWNLOAD CV</a>    
+        </div>
+        <div class="images">
+            <img src="images/oggy.png" class="oggy">
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/pic.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <br>
+                    <p>Hello, I'm Mohamed Jamal, an aspiring developer fresh out of Bannari Amman Institute of Technology. Armed with full stack, I bring a solid foundation in MongoDB, Express, React, Node. Eager to contribute, learn, and innovate, I'm ready to dive into the dynamic world of technology and make a meaningful impact. Let's build something extraordinary together!</p>
+                    <div class="tabs">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Website Development</li>
+                        <li><span>App Development</span><br>Building Android apps</li>
+                    </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-2025</span><br>BE from BIT Erode</li>
+                            <li><span>Schooling</span><br>Velammal Matric Theni</li>
+                        </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-window-restore"></i>
+                    <h2>Web Design</h2>
+                    <br>
+                    <p style="background-color: ;">Elevate your brand with our web design services portfolio, showcasing our commitment to creative excellence, user-centric design, and cutting-edge solutions. From custom websites to seamless e-commerce experiences, we transform visions into visually stunning online realities. Contact us today to craft a website that stands out in the digital landscape.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <br>
+                    <p>We specialize in crafting innovative and visually appealing mobile applications that enhance user experiences. From intuitive interfaces to seamless navigation, our designs blend creativity with functionality, ensuring your app stands out in the digital landscape. Let's collaborate to bring your app vision to life and create a captivating presence in the mobile world.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>WhatsApp Clone</h3>
+                    <p>The app which helps you connect with your people from anywhere around the world.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Expense Tracker</h3>
+                    <p>My Tracker records all your expenditures so you have a clear and detailed understanding of your budget. This helps you become more aware of what you are spending and where you are spending it.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>mohamedjamal.au21@bitsathy.ac.in</p>
+                <p><i class="fa-solid fa-phone"></i>8608509646</p>
+                <div class="social-icons">
+                    <a href=""<i class="fa-brands fa-github"></i></a>
+                    <a href=""<i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""<i class="fa-brands fa-facebook"></i></a>
+                    <a href=""<i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>   
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>   
+                    <button type="submit" class="btn btn2">Submit</button>     
+                </form>
+                <span id="msg">hello</span>
+            </div>
+        </div>
+    </div>
+</div>    
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw78MOdOZLy5vyBalPuiYaHDXUXmsNlaR6eGattbJcA06-8ENC8DhulJ8QjQ6c-wdnT/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!',error.message))
+    })
+  </script>
+</body>
+</html>
